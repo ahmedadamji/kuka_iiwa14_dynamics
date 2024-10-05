@@ -31,4 +31,4 @@ This project implements dynamic control for the KUKA iiwa14 robotic arm using fo
 - Python 3.x
 
 ## License
-# This project is licensed under the MIT License.
+This project is licensed under the MIT License.
