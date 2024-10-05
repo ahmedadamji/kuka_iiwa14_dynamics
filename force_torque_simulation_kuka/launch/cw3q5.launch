@@ -26,10 +26,10 @@
     <node name="static_tf_pub_world_to_gazebo_world" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0  0 0 0 1 map world" />
 
     <!-- Add your node here -->
-    <node name="dynamics_node" pkg="cw3q5" type="cw3q5.py" output="screen"/>
+    <node name="dynamics_node" pkg="force_torque_simulation_kuka" type="force_torque_simulation_kuka.py" output="screen"/>
     
     <group if="$(arg rviz)">
-    <node name="$(anon rviz)" pkg="rviz" type="rviz" respawn="false" args="-d $(find cw3q5)/config/iiwa14.rviz" output="screen"/>
+    <node name="$(anon rviz)" pkg="rviz" type="rviz" respawn="false" args="-d $(find force_torque_simulation_kuka)/config/iiwa14.rviz" output="screen"/>
     </group>
 
 </launch>

@@ -4,9 +4,9 @@ import rospy
 import rosbag
 import rospkg
 from trajectory_msgs.msg import JointTrajectory
-from cw3q2.iiwa14DynKDL import Iiwa14DynamicKDL
-from cw3q2.iiwa14DynBase import Iiwa14DynamicBase
-from cw3q2.iiwa14DynStudent import Iiwa14DynamicRef
+from robot_arm_trajectory_control.iiwa14DynKDL import Iiwa14DynamicKDL
+from robot_arm_trajectory_control.iiwa14DynBase import Iiwa14DynamicBase
+from robot_arm_trajectory_control.iiwa14DynStudent import Iiwa14DynamicRef
 import matplotlib.pyplot as plt
 from sensor_msgs.msg import JointState
 
@@ -88,10 +88,10 @@ class ComputingJointAccelerations:
         """
         # Defining ros package path
         rospack = rospkg.RosPack()
-        path = rospack.get_path('cw3q5')
+        path = rospack.get_path('force_torque_simulation_kuka')
 
         # Load path for selected question
-        bag = rosbag.Bag(path + '/bag/cw3q5.bag')
+        bag = rosbag.Bag(path + '/bag/force_torque_simulation_kuka.bag')
         
         return bag
     
@@ -196,7 +196,7 @@ class ComputingJointAccelerations:
 if __name__ == '__main__':
     # Initialize node
     try:
-        rospy.init_node('cw3q5', anonymous=True)
+        rospy.init_node('force_torque_simulation_kuka', anonymous=True)
 
         iiwa14 = ComputingJointAccelerations()
         iiwa14.run()

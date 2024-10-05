@@ -15,7 +15,7 @@ class Iiwa14DynamicKDL(Iiwa14DynamicBase):
 
         # load from urdf file
         rospack = rospkg.RosPack()
-        iiwa_description_path = rospack.get_path('cw3q2')
+        iiwa_description_path = rospack.get_path('robot_arm_trajectory_control')
         robot = URDF.from_xml_file(iiwa_description_path + '/model.urdf')
 
         (ok, self.kine_tree) = treeFromUrdfModel(robot)

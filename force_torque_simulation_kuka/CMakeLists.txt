@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(cw3q5)
+project(force_torque_simulation_kuka)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
